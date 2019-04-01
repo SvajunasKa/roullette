@@ -3,10 +3,14 @@ import Square from './squeare/Squeare'
 
 const wheel = props => {
     console.log(props)
-    return props.number.map((cube) =>{
+    return props.number.map((index, value) =>{
         return(
             <Square
-                number={cube}
+                key = {index}
+                colorIndex = {index}
+                number={value}
+                style = {props.color}
+                position = {props.position[index]}
             />
         )
     })

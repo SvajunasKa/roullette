@@ -1,15 +1,14 @@
 import React from 'react'
-import style from './Square.scss'
+import './Square.scss'
 
 const square = (props) =>{
-     console.log(props)
-   // const backgroundColor = props.color
-
-    //console.log(backgroundColor)
+    const background = props.style[props.colorIndex];
+    const elementPosition = props.position;
+    //console.log(elementPosition);
     return(
-        <div className={style.Box} >
-            {props}
+        <div className={'Box'} style={{backgroundColor: background}}>
+            {props.number}
         </div>
     )
-}
+};
 export default square
