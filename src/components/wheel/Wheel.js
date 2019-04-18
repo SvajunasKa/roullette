@@ -2,15 +2,15 @@ import React from 'react'
 import Square from './squeare/Squeare'
 
 const wheel = props => {
-    console.log(props)
-    return props.number.map((index, value) =>{
+    const all_data = Object.values(props.config);
+    return all_data.map((index, value) =>{
         return(
             <Square
-                key = {index}
-                colorIndex = {index}
-                number={value}
-                style = {props.color}
-                position = {props.position[index]}
+                key = {value}
+                colorIndex = {index.color}
+                number={index.number}
+                style = {index.color}
+                position = {index.position}
             />
         )
     })

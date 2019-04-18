@@ -2,9 +2,7 @@ import React from 'react'
 import './Square.scss'
 
 const square = (props) =>{
-    const background = props.style[props.colorIndex];
-    const elementPosition = props.position;
-    //console.log(elementPosition);
+     const background = props.colorIndex;
     return(
         <div className={'Box'} style={{backgroundColor: background}}>
             {props.number}
